@@ -1,6 +1,0 @@
-
-]squid:S1192"FDefine a constant instead of duplicating this literal "Jenny" 3 times.(Œë…ô
-Esquid:S14816".Remove this unused "fetchUser" local variable.(ñç¶è
-Nsquid:S36556"7Call "Optional#isPresent()" before accessing the value.(ñç¶è
-Nsquid:S3655-"7Call "Optional#isPresent()" before accessing the value.(ñç¶è
-Tsquid:S18546"=Remove this useless assignment to local variable "fetchUser".(ñç¶è
