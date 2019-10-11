@@ -1,0 +1,4 @@
+/home/cgi/Documents/SpringBoot/movieapp/src/test/java/com/stackroute/movieapp/movieapp/MovieappApplicationTests.java
+/home/cgi/Documents/SpringBoot/movieapp/src/test/java/com/stackroute/movieapp/controller/MovieControllerTest.java
+/home/cgi/Documents/SpringBoot/movieapp/src/test/java/com/stackroute/movieapp/repository/MovieRepositoryTest.java
+/home/cgi/Documents/SpringBoot/movieapp/src/test/java/com/stackroute/movieapp/service/MovieServiceImplTest.java

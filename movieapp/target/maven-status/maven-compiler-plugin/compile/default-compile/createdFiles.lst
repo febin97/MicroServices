@@ -1,0 +1,12 @@
+com/stackroute/movieapp/config/Swagger2Config.class
+com/stackroute/movieapp/service/MovieDummyServiceImpl.class
+com/stackroute/movieapp/exceptions/MovieNotFoundException.class
+com/stackroute/movieapp/domain/Movie.class
+com/stackroute/movieapp/MovieappApplication.class
+com/stackroute/movieapp/controller/MovieController.class
+com/stackroute/movieapp/onstartup/InitializeConfigProp.class
+com/stackroute/movieapp/config/WebConfiguration.class
+com/stackroute/movieapp/exceptions/MovieAlreadyExistsException.class
+com/stackroute/movieapp/service/MovieService.class
+com/stackroute/movieapp/onstartup/PreFillData2.class
+com/stackroute/movieapp/service/MovieServiceImpl.class
