@@ -1,0 +1,69 @@
+version: "3.4"
+services:
+  db:
+    container_name: mongodb
+    image: mongo
+    networks:
+      - custBridge
+    ports:
+      - '27017:27017'
+  dbql:
+    container_name: mysqlserver
+    image: mysql
+    networks:
+      - custBridge
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: movieDb
+      MYSQL_USER: root
+  config:
+    container_name: configServer
+    networks:
+      - custBridge
+    build: ./config-server/
+    ports:
+      - '8888:8888'
+  eureka:
+    container_name: eurekaServer
+    build: ./eurekaserver/
+    networks:
+      - custBridge
+    ports:
+      - '8761:8761'
+  movie:
+    container_name: movieService
+    networks:
+      - custBridge
+    build: ./MovieService/
+    ports:
+      - '8081:8081'
+    environment:
+      WAIT_HOSTS: config:8888
+    links:
+      - db:mongodb
+  zuul:
+    container_name: zuulGateway
+    networks:
+      - custBridge
+    build: ./movie-zuul-gateway/
+    ports:
+      - '8080:8080'
+  user:
+    container_name: userService
+    build: ./user-service/
+    networks:
+      - custBridge
+    ports:
+      - '8082:8082'
+    environment:
+      WAIT_HOSTS: config:8888
+    links:
+      - dbql:mysqlserver
+networks:
+  custBridge:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.9.0.0/16
