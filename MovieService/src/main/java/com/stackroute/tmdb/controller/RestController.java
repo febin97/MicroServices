@@ -64,7 +64,7 @@ public class RestController {
     @PutMapping("/movies")
     public ResponseEntity updateMovie(@Valid @RequestBody Movie movie) {
         if(movieService.existsById(movie.getId())) {
-            movieService.saveMovie(movie);
+            movieService.updateMovie(movie);
             return ResponseEntity.status(HttpStatus.OK).body(movie);
         }
         else {

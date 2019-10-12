@@ -60,5 +60,8 @@ public class MovieServiceImpl implements MovieService{
         //return movieRepo.movieByName(name);
         return movieRepo.findByTitleIgnoreCaseContaining(name);
     }
+    public void updateMovie(Movie movie){
+        movieRepo.save(movie);
+    }
 
 }
